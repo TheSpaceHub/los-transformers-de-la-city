@@ -117,4 +117,8 @@ public:
         dv.m_data = std::move(data);
         return dv;
     }
+
+    std::vector<T>& at(const std::string& column) {
+        return m_data[m_col_to_index[column]];
+    }
 };
