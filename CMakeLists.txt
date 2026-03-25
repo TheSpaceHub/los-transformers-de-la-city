@@ -6,19 +6,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(MKL CONFIG REQUIRED)
 
-add_executable(los_transformers_de_la_city
+add_executable(los-transformers-de-la-city
     src/main.cpp
     src/layers/layer.cpp
-    src/layers/dense.cpp
+    src/layers/dense_layer.cpp
     src/models/model.cpp
 )
 
-target_include_directories(los_transformers_de_la_city
+target_include_directories(los-transformers-de-la-city
     PRIVATE 
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(los_transformers_de_la_city
+target_link_libraries(los-transformers-de-la-city
     PRIVATE 
         MKL::MKL
 )
